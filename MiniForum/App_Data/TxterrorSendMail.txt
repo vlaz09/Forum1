@@ -1,0 +1,2 @@
+DataTime=08.11.2013 11:38:25Text: Ошибка отправки сообщения на емейлvlaz09@gmail.com/brMessage=Время ожидания операции истекло./br InnerException=/br Source=System/br StackTrace=   в System.Net.Mail.SmtpClient.Send(MailMessage message)
+   в MiniForum.Email.SendEmail(String toMail, String subject, String textMassage) в D:\vlad\MiniForum2\MiniForum\App_Code\AppCode.cs:строка 63/br TargetSite=Void Send(System.Net.Mail.MailMessage)/br HelpLink=/n/n

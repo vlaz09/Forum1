@@ -1,0 +1,25 @@
+﻿
+
+.header1
+{
+    position: relative;
+    margin: 5px;
+    padding: 0px;
+    background: #4b6c9e;
+    width: 100%;
+    color: White;
+    top: 0px;
+    left: 0px;
+}
+
+.title1
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+
+
+.kmsgdate-left{width:180px;text-align:center;line-height:1.8em;padding-left:10px;}
