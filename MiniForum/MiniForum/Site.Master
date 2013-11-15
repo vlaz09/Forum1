@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MiniForum.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx" Style="text-decoration: none;"> <h1> Mini Forum </h1> </asp:HyperLink>
+            </div>
+            <div class="loginDisplay">
+                <asp:Panel ID="pnlAnonymous" runat="server" Visible="true">
+                    <asp:HyperLink ID="hlnkSignIn" runat="server" NavigateUrl="~/Account/LoginDB.aspx">Войти</asp:HyperLink> &nbsp
+                    <asp:HyperLink ID="hlnkRegistration" runat="server" NavigateUrl="~/Account/RegisterDB.aspx">Регистрация</asp:HyperLink>
+                </asp:Panel>
+
+                <asp:Panel ID="pnlLoggedIn" runat="server" Visible="false">
+                    Добро пожаловать <span class="bold">&nbsp
+                        <asp:Label ID="lblUserName" runat="server" ViewStateMode="Disabled"></asp:Label>!</span>
+                        <br />
+                        <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">Выход</asp:LinkButton>
+                </asp:Panel>
+            </div>
+            <div class="clear hideSkiplink">
+                <br />
+               
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
